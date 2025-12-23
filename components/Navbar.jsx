@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import Button from "./Button";
+
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <nav className="navbar w-11/12 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,26 +25,32 @@ export default function Navbar() {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent text-xl">
+      <Image src="/images/main-logo.png" alt="logo" width={38} height={158} />
+      <Image src="/images/obiram.png" alt="obiram" width={113} height={24} />
+      </a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+    <ul className="menu menu-horizontal px-1 text-base primary-text">
+      <li><a className="hover:bg-transparent active:bg-transparent focus:bg-transparent focus:ring-0">Home</a></li>
+      <li><a className="hover:bg-transparent">Features</a></li>
       <li>
         <details>
-          <summary>Parent</summary>
-          <ul className="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
+          <summary className="hover:bg-transparent">Products</summary>
+          <ul className="menu p-2 bg-gray-700 w-40 z-1">
+            <li><a className="hover:bg-transparent">Submenu 1</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
         </details>
       </li>
-      <li><a>Item 3</a></li>
+      <li><a className="hover:bg-transparent">Pricing</a></li>
+      <li><a className="hover:bg-transparent">About</a></li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <button className="btn bg-transparent border-none shadow-none hover:bg-transparent primary-text text-[12px]">Log in</button>
+    <Button value={"Start for Free"}/>
   </div>
-</div>
+</nav>
   );
 }
