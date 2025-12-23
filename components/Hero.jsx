@@ -4,7 +4,7 @@ import ButtonTransparent from "./ButtonTransparent";
 
 export default function Hero() {
   return (
-    <section className="text-white py-16 px-8 flex flex-col items-start w-11/12 mx-auto gap-6 items-center text-center">
+    <section className="text-white pt-16 pb-4 px-8 flex flex-col items-start w-11/12 mx-auto gap-6 items-center text-center">
         <div className="hero-trust">
             <Image src="/icons/magic-star.png" alt="hero image" width={24} height={24} />
             <p className="text-[14px] leading-[140%]">Trusted by 5,000+ entrepreneurs building their online business</p>
