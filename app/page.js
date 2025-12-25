@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import OurClients from "../components/OurClients";
 import Dashboard from "../components/Dashboard";
+import Features from "../components/Features";
 
 export default function Home() {
   return (
@@ -18,11 +19,12 @@ export default function Home() {
         </div>
       <section className="relative -mt-5 lg:-mt-16 z-10">
         <div className="text-center">
-          <p className="text-[#373A46] text-[12px] md:text-[14px] lg:text-[18px] font-light mb-3">Trusted by Growing Commerce Businesses</p>
+          <p className="text-[#373A46] text-[12px] md:text-[14px] lg:text-[18px] font-light mb-3 opacity-[0.8]">Trusted by Growing Commerce Businesses</p>
           <h2 className="text-[#191715]  text-[22px] md:text-[28px] lg:text-[36px]">Brands Growing With Obiram</h2>
         </div>
         <OurClients />
       </section>
+      <Features />
     </main>
   );
 }
