@@ -63,3 +63,32 @@ body{
 }
 
 
+
+
+/* Happy clients slider 1 */
+@keyframes client-slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-client-slider {
+  animation: client-slider 16s linear infinite;
+}
+
+/* Happy clients slider 2 */
+@keyframes client-slider-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.animate-client-slider-reverse {
+  animation: client-slider-reverse 16s linear infinite;
+}
+
+

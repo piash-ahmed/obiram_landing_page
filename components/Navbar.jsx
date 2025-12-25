@@ -8,8 +8,8 @@ export default function Navbar() {
     <nav className="navbar w-11/12 mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
       </div>
       <ul
         tabIndex="-1"
@@ -25,9 +25,9 @@ export default function Navbar() {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent text-xl">
-      <Image src="/images/main-logo.png" alt="logo" width={38} height={158} />
-      <Image src="/images/obiram.png" alt="obiram" width={113} height={24} />
+    <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent">
+      <Image src="/images/main-logo.png" alt="logo" width={38} height={158} className="w-8 md:w-8 h-auto"/>
+      <Image src="/images/obiram.png" alt="obiram" width={113} height={24} className="w-20 md:w-28 h-auto"/>
       </a>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -48,8 +48,10 @@ export default function Navbar() {
     </ul>
   </div>
   <div className="navbar-end">
-    <button className="btn bg-transparent border-none shadow-none hover:bg-transparent primary-text text-[12px]">Log in</button>
-    <Button value={"Start for Free"}/>
+    <button className="btn bg-transparent border-none shadow-none hover:bg-transparent primary-text text-[14px] font-normal">Log in</button>
+    <div className="hidden md:inline-block">
+      <Button value={"Start for Free"}/>
+    </div>
   </div>
 </nav>
   );
