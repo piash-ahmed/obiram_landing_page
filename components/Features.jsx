@@ -17,7 +17,7 @@ export default function Features() {
         <h3 className="text-[#191715] text-[28px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] leading-[120%]">
           Everything Your Business Needs - All in One Place
         </h3>
-        <p className="text-[#373A46] text-[14px] md:text-[18px] font-light w-8/12 md:w-7/12 mx-auto mt-4 opacity-[0.8] leading-[140%]">
+        <p className="text-[#373A46] text-[14px] md:text-[18px] font-light w-9/12 md:w-7/12 mx-auto mt-4 opacity-[0.8] leading-[140%]">
           Obiram gives you everything you need to launch, manage, and scale your
           online store faster, easier, and smarter.
         </p>

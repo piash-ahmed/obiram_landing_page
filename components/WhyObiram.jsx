@@ -17,9 +17,9 @@ export default function WhyObiram() {
         </div>
         <div>
           <h3 className="text-[#191715] text-[28px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] leading-[120%]">
-            A Better Way to Build and Grow Your Online <br /> Business
+            A Better Way to Build and Grow Your Online Business
           </h3>
-          <p className="text-[#373A46] text-[14px] md:text-[18px] font-light w-8/12 md:w-11/12 my-4 md:pr-5 opacity-[0.8] leading-[140%]">
+          <p className="text-[#373A46] text-[14px] md:text-[18px] font-light  md:w-9/12 lg:w-11/12 my-4 md:pr-5 opacity-[0.8] leading-[140%]">
             Obiram combines simplicity, speed, and powerful features to give you
             everything you need — all in one seamless platform.
           </p>
@@ -43,7 +43,7 @@ export default function WhyObiram() {
               />
             </div>
             <div>
-              <h3 className="text-[#1f1f1f] text-[20px] leading-[140%] font-[500]">
+              <h3 className="text-[#1f1f1f] text-[16px] lg:text-[20px] leading-[140%] font-[500]">
                 Fast & Easy Store Setup
               </h3>
               <p className="text-[#C2C2C2] text-[12px] md:text-[14px] leading-[140%] font-light">
@@ -63,7 +63,7 @@ export default function WhyObiram() {
               />
             </div>
             <div>
-              <h3 className="text-[#1f1f1f] text-[20px] leading-[140%] font-[500]">
+              <h3 className="text-[#1f1f1f] text-[16px] lg:text-[20px] leading-[140%] font-[500]">
                 Built for Business Growth
               </h3>
               <p className="text-[#C2C2C2] text-[12px] md:text-[14px] leading-[140%] font-light">
@@ -83,7 +83,7 @@ export default function WhyObiram() {
               />
             </div>
             <div>
-              <h3 className="text-[#1f1f1f] text-[20px] leading-[140%] font-[500]">
+              <h3 className="text-[#1f1f1f] text-[16px] lg:text-[20px] leading-[140%] font-[500]">
                 Local Payment Power
               </h3>
               <p className="text-[#C2C2C2] text-[12px] md:text-[14px] leading-[140%] font-light">
@@ -103,7 +103,7 @@ export default function WhyObiram() {
               />
             </div>
             <div>
-              <h3 className="text-[#1f1f1f] text-[20px] leading-[140%] font-[500]">
+              <h3 className="text-[#1f1f1f] text-[16px] lg:text-[20px] leading-[140%] font-[500]">
                 Flexible & Transparent Pricing
               </h3>
               <p className="text-[#C2C2C2] text-[12px] md:text-[14px] leading-[140%] font-light">
@@ -123,7 +123,7 @@ export default function WhyObiram() {
               />
             </div>
             <div>
-              <h3 className="text-[#1f1f1f] text-[20px] leading-[140%] font-[500]">
+              <h3 className="text-[#1f1f1f] text-[16px] lg:text-[20px] leading-[140%] font-[500]">
                 Secured and Reliable
               </h3>
               <p className="text-[#C2C2C2] text-[12px] md:text-[14px] leading-[140%] font-light">
