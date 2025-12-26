@@ -17,6 +17,10 @@ body{
   font-family: 'Instrument Serif', serif;
 }
 
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
 
 .menu li a {
   background-color: transparent !important;
@@ -91,4 +95,10 @@ body{
   animation: client-slider-reverse 16s linear infinite;
 }
 
+
+.how-obiram-works-card {
+  border-radius: 20px;
+background: #FFF;
+box-shadow: 0 5px 28px 0 rgba(0, 0, 0, 0.04);
+}
 

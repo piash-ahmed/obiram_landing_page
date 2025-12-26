@@ -126,7 +126,7 @@ export default function Features() {
               categories through a clean, intuitive interface.
             </p>
           </div>
-          <div className="w-[280px] h-[130px] md:w-[300px] md:h-[200px] lg:w-[325px] lg:h-[285px] lg:-mb-[23px]">
+          <div className="w-[280px] h-[130px] md:w-[300px] md:h-[200px] lg:w-[325px] lg:h-[285px] lg:-mb-[16px]">
             <Image
               src="/images/feature-5.png"
               alt="feature image 1"
