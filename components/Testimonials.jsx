@@ -159,6 +159,22 @@ export default function Testimonials() {
           ))}
         </div>
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-3 md:p-4 lg:p-6 mt-4">
+        <div className="text-center px-4 py-6 bellow-testimonials-card">
+            <h3 className="text-[20px] text-black font-medium mb-3">Fast Store Setup</h3>
+            <p className="text-[#373A46] text-[14px] md:text-base font-light w-10/12 mx-auto opacity-[0.8]">Launch quickly with a streamlined setup designed to save time and effort.</p>
+         </div>
+         <div className="text-center px-4 py-6 bellow-testimonials-card">
+            <h3 className="text-[20px] text-black font-medium mb-3">Reliable Performance</h3>
+            <p className="text-[#373A46] text-[14px] md:text-base font-light w-10/12 mx-auto opacity-[0.8]">Built to stay fast, secure, and available for daily business operations.</p>
+         </div>
+         
+         <div className="text-center px-4 py-6 bellow-testimonials-card">
+            <h3 className="text-[20px] text-black font-medium mb-3">Always-On Support</h3>
+            <p className="text-[#373A46] text-[14px] md:text-base font-light w-10/12 mx-auto opacity-[0.8]">Get real human support whenever your business needs help.</p>
+         </div>
+         
+      </div>
     </section>
   );
 }

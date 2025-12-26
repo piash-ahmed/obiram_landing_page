@@ -13,7 +13,7 @@ export default function WhyObiram() {
             height={17}
             className="object-contain"
           />
-          <p className="text-[14px] text-[#373A46]">Why Obiram</p>
+          <p className="text-[12px] lg:text-[14px] text-[#373A46]">Why Obiram</p>
         </div>
         <div>
           <h3 className="text-[#191715] text-[28px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] leading-[120%]">
