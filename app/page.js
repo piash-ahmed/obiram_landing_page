@@ -4,6 +4,7 @@ import OurClients from "../components/OurClients";
 import Dashboard from "../components/Dashboard";
 import Features from "../components/Features";
 import HowObiramWorks from "../components/HowObiramWorks";
+import WhyObiram from "../components/WhyObiram";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       </section>
       <Features />
       <HowObiramWorks />
+      <WhyObiram />
     </main>
   );
 }

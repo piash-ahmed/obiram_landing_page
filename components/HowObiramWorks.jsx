@@ -27,7 +27,7 @@ export default function HowObiramWorks() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 md:mt-16 py-10 w-11/12 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mt-16 py-4 w-11/12 mx-auto">
         <div className="how-obiram-works-card flex flex-col px-3 p-4 rounded-xl overflow-hidden">
           <div className="flex justify-between pt-4">
             <div className="bg-[#fff6f3] w-20 h-20  flex items-center justify-center ml-3 rounded-lg">
