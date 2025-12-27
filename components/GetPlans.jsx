@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function GetPlans() {
   return (
-    <section className="my-20">
+    <section className="mt-16 md:mt-24 lg:mt-32 mb-8">
       <div className="flex flex-col  w-11/12 mx-auto py-3 flex-1">
         <div className="bg-[#f7f9fb] border border-[#d1d5db] rounded-full flex items-center justify-center gap-1 w-28 py-1 px-3 mb-4">
           <Image

@@ -8,6 +8,7 @@ import WhyObiram from "../components/WhyObiram";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import GetPlans from "../components/GetPlans";
+import FAQ from "../components/FAQ";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <GetPlans />
+      <FAQ />
     </main>
   );
 }
