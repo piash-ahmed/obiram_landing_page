@@ -7,6 +7,7 @@ import HowObiramWorks from "../components/HowObiramWorks";
 import WhyObiram from "../components/WhyObiram";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
+import GetPlans from "../components/GetPlans";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       <WhyObiram />
       <Testimonials />
       <Pricing />
+      <GetPlans />
     </main>
   );
 }
