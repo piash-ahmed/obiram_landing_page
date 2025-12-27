@@ -122,3 +122,46 @@ border: 1px solid rgba(237, 237, 237, 0.40);
 background: rgba(255, 255, 255, 0.04);
 box-shadow: 0 5px 28px 0 rgba(0, 0, 0, 0.05);
 }
+
+.monthly-btn {
+  border-radius: 12px;
+background: #FB4712;
+box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05), 0 4px 8px 0 rgba(255, 255, 255, 0.64) inset;
+color: #FFFFFF;
+padding: 10px 20px;
+}
+.card-one{
+  border-radius: 28px;
+border: 4px solid #FECDBF;
+background: #FFF;
+}
+.card-two{
+  border-radius: 28px;
+background: #FFF;
+box-shadow: 0 6px 33px 0 rgba(0, 0, 0, 0.06);
+border: 4px solid #ffffff;
+}
+.card-two-logo-border{
+ border-radius: 16px;
+border: 1.5px solid #fc6d412d;
+background: #FFF;
+box-shadow: 5px 5px 10px 0 #FFF inset, 0 8px 10.91px 0 rgba(252, 108, 65, 0.06);
+}
+.card-two-logo{
+ border-radius: 16px;
+
+background: #FFF;
+box-shadow: 5px 5px 10px 0 #FFF inset, 0 8px 10.91px 0 rgba(252, 108, 65, 0.06);
+}
+.price-card {
+  width: 322px;
+  border-radius: 18px;
+border: 1px solid #F2F4F7;
+background: rgba(255, 255, 255, 0.70);
+box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.06);
+padding: 10px 20px 10px 0;
+}
+.card-top{
+  border-radius: 24px;
+background: linear-gradient(348deg, #FFEDE7 51.8%, #FDAA92 123.47%);
+}
