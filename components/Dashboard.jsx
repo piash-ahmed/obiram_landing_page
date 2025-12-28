@@ -7,7 +7,7 @@ export default function Dashboard() {
           alt="Analytics Image"
           width={1000}
           height={754}
-          className="mx-auto mt-10 dashboard-image w-9/12"
+          className="mx-auto dashboard-image w-9/12"
         />
   );
 }

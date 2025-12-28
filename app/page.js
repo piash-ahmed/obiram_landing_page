@@ -10,6 +10,7 @@ import Pricing from "../components/Pricing";
 import GetPlans from "../components/GetPlans";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
+import CTASection from "../components/CTASection";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
       <Pricing />
       <GetPlans />
       <FAQ />
+      <CTASection />
       <Footer />
     </main>
   );

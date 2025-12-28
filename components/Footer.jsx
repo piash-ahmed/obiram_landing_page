@@ -4,26 +4,26 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer
-      className="text-white bg-cover bg-top bg-no-repeat pt-6 md:pt-10 mt-10"
+      className="text-white bg-cover bg-top bg-no-repeat pt-6 md:pt-10"
       style={{ backgroundImage: "url('/images/footer-bg.png')" }}
     >
       <section className="flex flex-col lg:flex-row justify-center gap-2 py-10 px-6 md:px-0 lg:py-10 font-light w-11/12 mx-auto">
         <aside className="lg:w-[40%]">
           <div className="flex">
-            <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent mb-3">
+            <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent mb-3 p-0">
               <Image
                 src="/images/main-logo.png"
                 alt="logo"
                 width={38}
                 height={158}
-                className="w-8 md:w-12 h-auto"
+                className="w-10 md:w-12 h-auto"
               />
               <Image
                 src="/images/obiram.png"
                 alt="obiram"
                 width={113}
                 height={24}
-                className="w-20 md:w-32 h-auto"
+                className="w-24 md:w-32 h-auto"
               />
             </a>
           </div>

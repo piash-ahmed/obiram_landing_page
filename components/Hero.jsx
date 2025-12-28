@@ -17,7 +17,7 @@ export default function Hero() {
             <h1 className="text-[32px] lg:text-[60px] leading-[120%] tracking-[-1.2px]">The All-in-One Commerce Platform</h1>
             <p className="text-[12px] md:text-[16px] lg:text-[18px] text-[#fedad0] leading-[140%] font-light lg:w-[650px] mx-auto my-6">Obiram is One Platform to build, run, and grow your commerce business—without limits. Built for fast‑growing eCommerce & D2C Brands</p>
         </div>
-        <div className="flex flex-col items-center md:flex-row gap-4 md:gap-6">
+        <div className="flex flex-col items-center md:flex-row gap-4 md:gap-6 mb-10">
             <Button value="Get Started for Free" />
             <ButtonTransparent value="Why we build Obiram" />
         </div>
