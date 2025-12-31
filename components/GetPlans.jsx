@@ -20,7 +20,7 @@ export default function GetPlans() {
           </h3>
         </div>
       </div>
-
+    {/* cards */}
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
         <div className="get-plans-card px-4 py-5 md:px-5 md:py-7">
           <div className="why-obiram-icon w-16 h-16 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-2 md:p-1 lg:p-2 mb-10">

@@ -6,17 +6,22 @@ import Features from "../components/Features";
 import HowObiramWorks from "../components/HowObiramWorks";
 import WhyObiram from "../components/WhyObiram";
 import Testimonials from "../components/Testimonials";
-import Pricing from "../components/Pricing";
+import Footer from '../components/Footer'
 import GetPlans from "../components/GetPlans";
 import FAQ from "../components/FAQ";
-import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
+import PricingSection from "../components/pricing/PricingSection";
+
+export const metadata = {
+  title: "Home | Obiram landing page",
+  description: "Build, Run & Grow Your Online Store.The All-in-One Commerce Platform",
+  };
 
 export default function Home() {
   return (
     <main>
       <section
-        className="bg-cover lg:bg-contain bg-top bg-no-repeat  h-full w-full pb-28 md:pb-56 lg:pb-96"
+        className="bg-cover bg-left bg-no-repeat  h-full w-full pb-28 md:pb-56 lg:pb-96"
         style={{ backgroundImage: "url('/images/hero-bg.png')" }}
       >
         <Navbar />
@@ -36,7 +41,7 @@ export default function Home() {
       <HowObiramWorks />
       <WhyObiram />
       <Testimonials />
-      <Pricing />
+      <PricingSection />
       <GetPlans />
       <FAQ />
       <CTASection />
