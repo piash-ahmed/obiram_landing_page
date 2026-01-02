@@ -2,57 +2,126 @@
 
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   return (
-    <nav className="navbar w-11/12 mx-auto">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white mr-2">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+    <header
+      className={`lg:py-2 ${isHome ? " bg-transparent" : " bg-[#fb4814]"}`}
+    >
+      <nav className={`navbar w-11/12 mx-auto`}>
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost lg:hidden text-white mr-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex="-1"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Parent</a>
+                <ul className="p-2">
+                  <li>
+                    <a>Submenu 1</a>
+                  </li>
+                  <li>
+                    <a>Submenu 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>Item 3</a>
+              </li>
+            </ul>
+          </div>
+          <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent">
+            <Image
+              src="/images/main-logo.png"
+              alt="logo"
+              width={38}
+              height={158}
+              className="w-8 md:w-8 h-auto"
+            />
+            <Image
+              src="/images/obiram.png"
+              alt="obiram"
+              width={113}
+              height={24}
+              className="w-20 md:w-28 h-auto"
+            />
+          </a>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 text-base primary-text">
+            <li>
+              <Link
+                href="/"
+                className="hover:bg-transparent active:bg-transparent focus:bg-transparent focus:ring-0"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <a className="hover:bg-transparent">Features</a>
+            </li>
+            <li>
+              <details>
+                <summary className="hover:bg-transparent">Products</summary>
+                <ul className="menu p-2 bg-gray-700 w-40 z-1">
+                  <li>
+                    <a className="hover:bg-transparent">Submenu 1</a>
+                  </li>
+                  <li>
+                    <a>Submenu 2</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <a className="hover:bg-transparent">Pricing</a>
+            </li>
+            <li>
+              <Link href="/about-us" className="hover:bg-transparent">
+                About
+              </Link>
+            </li>
           </ul>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
-    </div>
-    <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent">
-      <Image src="/images/main-logo.png" alt="logo" width={38} height={158} className="w-8 md:w-8 h-auto"/>
-      <Image src="/images/obiram.png" alt="obiram" width={113} height={24} className="w-20 md:w-28 h-auto"/>
-      </a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 text-base primary-text">
-      <li><a className="hover:bg-transparent active:bg-transparent focus:bg-transparent focus:ring-0">Home</a></li>
-      <li><a className="hover:bg-transparent">Features</a></li>
-      <li>
-        <details>
-          <summary className="hover:bg-transparent">Products</summary>
-          <ul className="menu p-2 bg-gray-700 w-40 z-1">
-            <li><a className="hover:bg-transparent">Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a className="hover:bg-transparent">Pricing</a></li>
-      <li><a className="hover:bg-transparent">About</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <button className="btn bg-transparent border-none shadow-none hover:bg-transparent primary-text text-[14px] font-normal">Log in</button>
-    <div className="hidden md:inline-block">
-      <Button value={"Start for Free"}/>
-    </div>
-  </div>
-</nav>
+        </div>
+        <div className="navbar-end">
+          <button className="btn bg-transparent border-none shadow-none hover:bg-transparent primary-text text-[14px] font-normal">
+            Log in
+          </button>
+          <div className="hidden md:inline-block">
+            <Button value={"Start for Free"} />
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }

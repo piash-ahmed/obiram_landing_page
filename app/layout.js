@@ -1,7 +1,7 @@
+import Footer from "../components/Footer";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
-  
   return (
     <html lang="en">
       <head>
@@ -28,9 +28,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

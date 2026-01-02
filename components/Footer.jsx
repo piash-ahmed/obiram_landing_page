@@ -75,15 +75,12 @@ export default function Footer() {
             <h6 className="text-[#ffffffb3] text-base md:text-lg uppercase font-normal mb-1 md:mb-4">
               Obiram
             </h6>
-            <a href="#" className="link link-hover text-sm ">
-              Home
-            </a>
+            <Link className="link link-hover text-sm" href="/">Home</Link>
             <a href="#" className="link link-hover text-sm">
               Pricing
             </a>
-            <a href="#" className="link link-hover text-sm">
-              Why Obiram
-            </a>
+            <Link className="link link-hover text-sm" href="/about-us">About</Link>
+
           </nav>
           <nav className="space-y-1.5 flex flex-col">
             <h6 className="text-[#ffffffb3] text-base md:text-lg uppercase font-normal mb-1 md:mb-4">
@@ -100,18 +97,16 @@ export default function Footer() {
             <h6 className="text-[#ffffffb3] text-base md:text-lg uppercase font-normal mb-1 md:mb-4">
               Company
             </h6>
-            <a href="#" className="link link-hover text-sm">
+            <Link href="/terms-of-service" className="link link-hover text-sm">
               Terms of Service
-            </a>
+            </Link>
             <Link
-              href="/terms_&_conditions"
+              href="/privacy-policy"
               className="link link-hover text-sm"
             >
               Privacy Policy
             </Link>
-            <a href="#" className="link link-hover text-sm">
-              Return and Refund Policy
-            </a>
+            <Link className="link link-hover text-sm" href="/return-&-refund-policy">Return and Refund Policy</Link>
           </nav>
           <nav className="space-y-3 flex flex-col">
             <h6 className="text-[#ffffffb3] text-base md:text-lg uppercase font-normal mb-1 md:mb-4">
