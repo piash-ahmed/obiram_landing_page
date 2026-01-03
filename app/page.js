@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main>
       <section
-        className="bg-cover bg-left bg-no-repeat  h-full w-full pb-28 md:pb-56 lg:pb-96"
+        className="bg-cover bg-top lg:bg-left bg-no-repeat  h-full w-full pb-28 md:pb-56 lg:pb-96"
         style={{ backgroundImage: "url('/images/hero-bg.png')" }}
       >
         <Navbar />

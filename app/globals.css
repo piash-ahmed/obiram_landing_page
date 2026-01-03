@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.menu li > *:hover,
+.menu li > *:focus,
+.menu li > *:active {
+  background-color: transparent !important;
+}
 .primary-text {
   color: #f2f4f7;
 }
@@ -38,6 +43,17 @@ body {
   background-color: transparent !important;
   box-shadow: none !important;
   outline: none !important;
+}
+.dropdown-items-icon{
+  background-color: rgb(211, 211, 211);
+}
+.dropdown-items-icon-sm{
+  background-color: #fb4712;
+}
+.dropdown-item:hover 
+.dropdown-items-icon{
+  background-color: #fb4712;
+  transition: all 0.4s linear;
 }
 
 .hero-trust {
