@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 
+
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -15,11 +16,14 @@ export default function Navbar() {
 const [featureOpen, setFeatureOpen] = useState(false);
 
 
+
+
   return (
     <header
       className={`lg:py-2 ${isHome ? " bg-transparent" : " bg-[#fb4814]"}`}
     >
       <nav className={`navbar w-11/12 mx-auto`}>
+        {/* Menu Mobile */}
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -43,152 +47,260 @@ const [featureOpen, setFeatureOpen] = useState(false);
                 />{" "}
               </svg>
             </div>
+            <ul
+            tabIndex="-1"
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-80 p-2 shadow z-50">
+              <li className="text-base font-medium text-gray-600 hover:text-gray-900 focus:text-gray-900 my-1 pl-3">Home</li>
+              <li className="text-base font-medium text-gray-600 hover:text-gray-900 focus:text-gray-900 my-1 pl-3">Pricing</li>
+              
+              {/* Feature menu */}
+              <li>
+                <button
+                  onClick={() => setFeatureOpen(!featureOpen)}
+                  className="flex items-center text-base font-medium text-gray-600 hover:text-gray-900 focus:text-gray-900 my-1 pl-3"
+                >
+                  Features
+                  <motion.span
+                              animate={{ rotate: featureOpen ? 180 : 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="flex items-center"
+                            >
+                              <FiChevronDown size={20} />
+                            </motion.span>
+                          
+                </button>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.2 }}
-              className="menu menu-sm dropdown-content absolute top-full left-0 mt-3 w-80 rounded-xl bg-white shadow-lg py-2 z-10"
-              tabIndex={-1}
-            >
-              <Link href="#" className="block px-1 py-1 text-sm">
-                <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
-                  <Image
-                    src="/icons/store-icon.png"
-                    alt="Store Image"
-                    width={40}
-                    height={40}
-                    className="dropdown-items-icon-sm p-2 rounded-lg"
-                  />
-                  <div className="">
-                    <h3 className="text-[14px] font-medium">
-                      Easy Store Setup
-                    </h3>
-                    <p className="text-gray-500 text-[12px]">
-                      Launch your store quickly...
-                    </p>
+                {featureOpen && (
+                  <div className="flex flex-col items-center justify-center">
+                    <Link href="#" className="w-full px-1 py-1 text-sm">
+                          <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                            <Image
+                              src="/icons/store-icon.png"
+                              alt="Store Image"
+                              width={40}
+                              height={40}
+                              className="dropdown-items-icon-sm p-2 rounded-lg"
+                            />
+                            <div className="">
+                              <h3 className="text-[14px] font-medium">
+                                Easy Store Setup
+                              </h3>
+                              <p className="text-gray-500 text-[12px]">
+                                Launch your store quickly...
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                        <Link href="#" className="w-full px-1 py-1 text-sm -mt-2">
+                          <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                            <Image
+                              src="/icons/store-icon.png"
+                              alt="Store Image"
+                              width={40}
+                              height={40}
+                              className="dropdown-items-icon-sm p-2 rounded-lg"
+                            />
+                            <div className="">
+                              <h3 className="text-[14px] font-medium">
+                                Multi-Sales Channels
+                              </h3>
+                              <p className="text-gray-500 text-[12px]">
+                                In-shop & Online Store selling...
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                        
+                        <Link href="#" className="w-full px-1 py-1 text-sm -mt-2">
+                          <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                            <Image
+                              src="/icons/doller-icon.png"
+                              alt="Store Image"
+                              width={40}
+                              height={40}
+                              className="dropdown-items-icon-sm p-2 rounded-lg"
+                            />
+                            <div className="">
+                              <h3 className="text-[14px] font-medium">
+                                Apps & Integrations
+                              </h3>
+                              <p className="text-gray-500 text-[12px]">
+                                Extend your store with tools...
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                        <Link href="#" className="w-full px-1 py-1 text-sm -mt-2">
+                          <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                            <Image
+                              src="/icons/store-icon.png"
+                              alt="Store Image"
+                              width={40}
+                              height={40}
+                              className="dropdown-items-icon-sm p-2 rounded-lg"
+                            />
+                            <div className="">
+                              <h3 className="text-[14px] font-medium">
+                                Themes & Customization
+                              </h3>
+                              <p className="text-gray-500 text-[12px]">
+                                Design your store, your way...
+                              </p>
+                            </div>
+                          </div>
+                        </Link> 
+                        <Link href="#" className="w-full px-1 py-1 text-sm -mt-2">
+                          <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                            <Image
+                              src="/icons/paperclip-icon.png"
+                              alt="Store Image"
+                              width={40}
+                              height={40}
+                              className="dropdown-items-icon-sm p-2 rounded-lg"
+                            />
+                            <div className="">
+                              <h3 className="text-[14px] font-medium">
+                                Analytics & Reporting
+                              </h3>
+                              <p className="text-gray-500 text-[12px]">
+                                Track sales performance and business trends...
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                        <Link href="#" className="w-full px-1 py-1 text-sm -mt-2">
+                          <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                            <Image
+                              src="/icons/doller-icon.png"
+                              alt="Store Image"
+                              width={40}
+                              height={40}
+                              className="dropdown-items-icon-sm p-2 rounded-lg"
+                            />
+                            <div className="">
+                              <h3 className="text-[14px] font-medium">
+                                Payments & Shipping
+                              </h3>
+                              <p className="text-gray-500 text-[12px]">
+                                Accept payments and deliver orders easily...
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                        <Link href="#" className="w-full px-1 py-1 text-sm -mt-2">
+                          <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                            <Image
+                              src="/icons/paperclip-icon.png"
+                              alt="Store Image"
+                              width={40}
+                              height={40}
+                              className="dropdown-items-icon-sm p-2 rounded-lg"
+                            />
+                            <div className="">
+                              <h3 className="text-[14px] font-medium">
+                                Inventory & Order Management
+                              </h3>
+                              <p className="text-gray-500 text-[12px]">
+                                Manage products, orders, and customers...
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
                   </div>
-                </div>
-              </Link>
+                )}
+              </li>
+              {/* Products menu */}
+              <li>
+      <button
+        onClick={() => setProductOpen(!productOpen)}
+        className="flex items-center text-base font-medium text-gray-600 hover:text-gray-900 focus:text-gray-900 my-1 pl-3"
+      >
+        Products
+        <motion.span
+                    animate={{ rotate: productOpen ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex items-center"
+                  >
+                    <FiChevronDown size={20} />
+                  </motion.span>
+                
+      </button>
 
-              <Link href="#" className="block px-1 py-1 text-sm">
-                <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
-                  <Image
-                    src="/icons/paperclip-icon.png"
-                    alt="Store Image"
-                    width={40}
-                    height={40}
-                    className="dropdown-items-icon-sm p-2 rounded-lg"
-                  />
-                  <div className="">
-                    <h3 className="text-[14px] font-medium">
-                      Inventory & Order Management
-                    </h3>
-                    <p className="text-gray-500 text-[12px]">
-                      Manage products, orders, and customers...
-                    </p>
-                  </div>
-                </div>
-              </Link>
+                  
+                  {productOpen && (
+                    <div className=" flex flex-col">
+                      <Link href="#" className="w-full px-1 py-1 text-sm">
+                        <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                          <Image
+                            src="/icons/themes.png"
+                            alt="Store Image"
+                            width={40}
+                            height={40}
+                            className="dropdown-items-icon-sm p-2 rounded-lg"
+                          />
+                          <div className="">
+                            <h3 className="text-[16px] font-medium">
+                              Obiram Themes
+                            </h3>
+                            <p className="text-gray-500 text-[14px] mt-1">
+                              Professional store designs...
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
 
-              <Link href="#" className="block px-1 py-1 text-sm">
-                <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
-                  <Image
-                    src="/icons/doller-icon.png"
-                    alt="Store Image"
-                    width={40}
-                    height={40}
-                    className="dropdown-items-icon-sm p-2 rounded-lg"
-                  />
-                  <div className="">
-                    <h3 className="text-[14px] font-medium">
-                      Payments & Shipping
-                    </h3>
-                    <p className="text-gray-500 text-[12px]">
-                      Accept payments and deliver orders easily...
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              <Link href="#" className="block px-1 py-1 text-sm">
-                <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
-                  <Image
-                    src="/icons/store-icon.png"
-                    alt="Store Image"
-                    width={40}
-                    height={40}
-                    className="dropdown-items-icon-sm p-2 rounded-lg"
-                  />
-                  <div className="">
-                    <h3 className="text-[14px] font-medium">
-                      Multi-Sales Channels
-                    </h3>
-                    <p className="text-gray-500 text-[12px]">
-                      In-shop & Online Store selling...
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              <Link href="#" className="block px-1 py-1 text-sm">
-                <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
-                  <Image
-                    src="/icons/paperclip-icon.png"
-                    alt="Store Image"
-                    width={40}
-                    height={40}
-                    className="dropdown-items-icon-sm p-2 rounded-lg"
-                  />
-                  <div className="">
-                    <h3 className="text-[14px] font-medium">
-                      Analytics & Reporting
-                    </h3>
-                    <p className="text-gray-500 text-[12px]">
-                      Track sales performance and business trends...
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              <Link href="#" className="block px-1 py-1 text-sm">
-                <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
-                  <Image
-                    src="/icons/doller-icon.png"
-                    alt="Store Image"
-                    width={40}
-                    height={40}
-                    className="dropdown-items-icon-sm p-2 rounded-lg"
-                  />
-                  <div className="">
-                    <h3 className="text-[14px] font-medium">
-                      Apps & Integrations
-                    </h3>
-                    <p className="text-gray-500 text-[12px]">
-                      Extend your store with tools...
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              <Link href="#" className="block px-1 py-1 text-sm">
-                <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
-                  <Image
-                    src="/icons/store-icon.png"
-                    alt="Store Image"
-                    width={40}
-                    height={40}
-                    className="dropdown-items-icon-sm p-2 rounded-lg"
-                  />
-                  <div className="">
-                    <h3 className="text-[14px] font-medium">
-                      Themes & Customization
-                    </h3>
-                    <p className="text-gray-500 text-[12px]">
-                      Design your store, your way...
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
+                      <Link href="#" className="w-full px-1 py-1 text-sm -mt-2">
+                        <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                          <Image
+                            src="/icons/apps.png"
+                            alt="Store Image"
+                            width={40}
+                            height={40}
+                            className="dropdown-items-icon-sm p-2 rounded-lg"
+                          />
+                          <div className="">
+                            <h3 className="text-[16px] font-medium">
+                              Obiram Apps
+                            </h3>
+                            <p className="text-gray-500 text-[14px] mt-1">
+                              Built-in tools for merchants...
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      <Link href="#" className="w-full px-1 py-1 text-sm -mt-2">
+                        <div className="dropdown-item flex items-center gap-3 w-full h-full bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                          <Image
+                            src="/icons/data-analytics.png"
+                            alt="Store Image"
+                            width={40}
+                            height={40}
+                            className="dropdown-items-icon-sm p-2 rounded-lg"
+                          />
+                          <div className="">
+                            <h3 className="text-[16px] font-medium">
+                              Obiram POS (Coming Soon)
+                            </h3>
+                            <p className="text-gray-500 text-[14px] mt-1">
+                              Sell in-store, retail & everywhere...
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+
+                    </div>
+                  )}
+                
+              </li>
+           
+              <li className="text-base font-medium text-gray-600 hover:text-gray-900 focus:text-gray-900 my-1 pl-3">About</li>
+              </ul>
+
+            
           </div>
+
           <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent">
             <Image
               src="/images/main-logo.png"
@@ -206,6 +318,7 @@ const [featureOpen, setFeatureOpen] = useState(false);
             />
           </a>
         </div>
+        {/* Menu Dextop */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-base">
             <li>
@@ -226,21 +339,7 @@ const [featureOpen, setFeatureOpen] = useState(false);
                 </motion.span>
               </Link>
             </li>
-            <li>
-              <a className="hover:bg-transparent hover:text-white hover:font-medium">
-                <motion.span
-                  className="inline-block text-[#ffffffe1] font-medium cursor-pointer"
-                  whileHover={{ y: -6, color: "#ffffff" }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 15,
-                  }}
-                >
-                  Features
-                </motion.span>
-              </a>
-            </li>
+           
             {/* Features */}
             <li className="bg-transparent hover:bg-transparent">
               {/* Dropdown menu */}
@@ -421,6 +520,7 @@ const [featureOpen, setFeatureOpen] = useState(false);
                 </AnimatePresence>
               </div>
             </li>
+
             {/* Products */}
             <li className="bg-transparent hover:bg-transparent">
               {/* Dropdown menu */}
@@ -464,7 +564,7 @@ const [featureOpen, setFeatureOpen] = useState(false);
                       <Link href="#" className="block px-1 py-1 text-sm">
                         <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
                           <Image
-                            src="/icons/store-icon.png"
+                            src="/icons/themes.png"
                             alt="Store Image"
                             width={40}
                             height={40}
@@ -472,10 +572,10 @@ const [featureOpen, setFeatureOpen] = useState(false);
                           />
                           <div className="">
                             <h3 className="text-[16px] font-medium">
-                              Easy Store Setup
+                              Obiram Themes
                             </h3>
                             <p className="text-gray-500 text-[14px] mt-1">
-                              Launch your store quickly...
+                              Professional store designs...
                             </p>
                           </div>
                         </div>
@@ -484,7 +584,7 @@ const [featureOpen, setFeatureOpen] = useState(false);
                       <Link href="#" className="block px-1 py-1 text-sm">
                         <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
                           <Image
-                            src="/icons/paperclip-icon.png"
+                            src="/icons/apps.png"
                             alt="Store Image"
                             width={40}
                             height={40}
@@ -492,10 +592,10 @@ const [featureOpen, setFeatureOpen] = useState(false);
                           />
                           <div className="">
                             <h3 className="text-[16px] font-medium">
-                              Inventory & Order Management
+                              Obiram Apps
                             </h3>
                             <p className="text-gray-500 text-[14px] mt-1">
-                              Manage products, orders, and customers...
+                              Built-in tools for merchants...
                             </p>
                           </div>
                         </div>
@@ -504,7 +604,7 @@ const [featureOpen, setFeatureOpen] = useState(false);
                       <Link href="#" className="block px-1 py-1 text-sm">
                         <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
                           <Image
-                            src="/icons/doller-icon.png"
+                            src="/icons/data-analytics.png"
                             alt="Store Image"
                             width={40}
                             height={40}
@@ -512,10 +612,10 @@ const [featureOpen, setFeatureOpen] = useState(false);
                           />
                           <div className="">
                             <h3 className="text-[16px] font-medium">
-                              Payments & Shipping
+                              Obiram POS (Coming Soon)
                             </h3>
                             <p className="text-gray-500 text-[14px] mt-1">
-                              Accept payments and deliver orders easily...
+                              Sell in-store, retail & everywhere...
                             </p>
                           </div>
                         </div>
@@ -527,6 +627,7 @@ const [featureOpen, setFeatureOpen] = useState(false);
                 </AnimatePresence>
               </div>
             </li>
+
             <li>
               <a className="hover:bg-transparent hover:text-white hover:font-medium">
                 <motion.span
@@ -542,6 +643,7 @@ const [featureOpen, setFeatureOpen] = useState(false);
                 </motion.span>
               </a>
             </li>
+
             <li>
               <Link
                 href="/about-us"
@@ -589,3 +691,9 @@ const [featureOpen, setFeatureOpen] = useState(false);
     </header>
   );
 }
+
+
+
+
+
+

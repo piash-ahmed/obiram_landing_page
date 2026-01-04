@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer
-      className="text-white bg-cover bg-top bg-no-repeat pt-6 md:pt-10"
+      className="text-white bg-cover bg-top bg-no-repeat pt-6 md:pt-10 relative -mt-16 md:-mt-32 lg:-mt-72"
       style={{ backgroundImage: "url('/images/footer-bg.png')" }}
     >
       <section className="flex flex-col lg:flex-row justify-center gap-2 py-10 px-6 md:px-0 lg:py-10 font-light w-11/12 mx-auto">
