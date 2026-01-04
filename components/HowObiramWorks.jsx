@@ -4,7 +4,7 @@ export default function HowObiramWorks() {
   return (
     <section>
       <div className="flex flex-col items-center justify-center text-center mt-24 md:mt-32 lg:mt-40 w-11/12 mx-auto py-3">
-        <div className="bg-[#f7f9fb] border border-[#d1d5db] rounded-full flex items-center gap-1 w-48 py-1 px-3 mb-4">
+        <div className="bg-[#f7f9fb] border border-[#d1d5db] rounded-full flex items-center justify-center gap-1 w-48 py-1 px-3 mb-4">
           <Image
             src="/icons/lightning.png"
             alt="feature icon 1"
@@ -20,7 +20,7 @@ export default function HowObiramWorks() {
           <h3 className="text-[#191715] text-[28px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] leading-[120%]">
             Start Selling Online in 3 Simple Steps
           </h3>
-          <p className="text-[#373A46] text-[14px] md:text-[18px] font-light w-8/12 md:w-7/12 mx-auto mt-4 opacity-[0.8] leading-[140%]">
+          <p className="text-[#373A46] text-[15px] md:text-[18px] font-light w-10/12 md:w-9/12 lg:w-8/12 mx-auto mt-5 opacity-[0.8] leading-[140%]">
             Obiram makes it easy to build, manage, and grow your business in a
             few minutes, without worrying about the technical side.
           </p>
@@ -74,7 +74,7 @@ export default function HowObiramWorks() {
           <h3 className="text-[#191715] text-[20px] md:text-[24px] font-normal pl-2">
             Add Products & Setup
           </h3>
-          <p className="text-[#373A46] text-[12px] md:text-[16px] font-light mt-4 opacity-[0.8] leading-[140%] px-1 pb-3">
+          <p className="text-[#373A46] text-[12px] md:text-[16px] font-light mt-4 opacity-[0.8] leading-[140%] px-1 pb-3 ">
             Upload products, set prices, and design your brand experience.
             Customize layouts, colors, and pages to match your business
             identity.

@@ -22,8 +22,9 @@ export default function GetPlans() {
       </div>
     {/* cards */}
       <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      
         <div className="get-plans-card px-4 py-5 md:px-5 md:py-7">
-          <div className="why-obiram-icon w-16 h-16 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-2 md:p-1 lg:p-2 mb-10">
+          <div className="why-obiram-icon w-14 h-14 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-1 md:p-1 lg:p-2 mb-10">
             <Image
               src="/icons/cart.png"
               alt="product icon"
@@ -42,7 +43,7 @@ export default function GetPlans() {
         </div>
 
         <div className="get-plans-card px-4 py-5 md:px-5 md:py-7">
-          <div className="why-obiram-icon w-16 h-16 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-2 md:p-1 lg:p-2 mb-10">
+          <div className="why-obiram-icon w-14 h-14 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-1 md:p-1 lg:p-2 mb-10">
             <Image
               src="/icons/financial_across.png"
               alt="product icon"
@@ -61,7 +62,7 @@ export default function GetPlans() {
         </div>
 
         <div className="get-plans-card px-4 py-5 md:px-5 md:py-7">
-          <div className="why-obiram-icon w-16 h-16 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-2 md:p-1 lg:p-2 mb-10">
+          <div className="why-obiram-icon w-14 h-14 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-1 md:p-1 lg:p-2 mb-10">
             <Image
               src="/icons/data-analytics.png"
               alt="product icon"
@@ -80,7 +81,8 @@ export default function GetPlans() {
         </div>
 
         <div className="get-plans-card px-4 py-5 md:px-5 md:py-7">
-          <div className="why-obiram-icon w-16 h-16 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-2 md:p-1 lg:p-2 mb-10">
+          
+          <div className="why-obiram-icon w-14 h-14 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-1 md:p-1 lg:p-2 mb-10">
             <Image
               src="/icons/apps.png"
               alt="product icon"
@@ -99,7 +101,7 @@ export default function GetPlans() {
         </div>
 
         <div className="get-plans-card px-4 py-5 md:px-5 md:py-7">
-          <div className="why-obiram-icon w-16 h-16 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-2 md:p-1 lg:p-2 mb-10">
+           <div className="why-obiram-icon w-14 h-14 md:w-20 md:h-20 lg:w-16 lg:h-14  flex items-center justify-center rounded-xl p-1 md:p-1 lg:p-2 mb-10">
             <Image
               src="/icons/themes.png"
               alt="product icon"
@@ -108,6 +110,7 @@ export default function GetPlans() {
               className="object-contain p-2"
             />
           </div>
+
           <h3 className="text-base text-[#101828] font-semibold mb-4">
             Obiram Themes
           </h3>

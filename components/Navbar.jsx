@@ -11,7 +11,9 @@ import { FiChevronDown } from "react-icons/fi";
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const [open, setOpen] = useState(false);
+  const [productOpen, setProductOpen] = useState(false);
+const [featureOpen, setFeatureOpen] = useState(false);
+
 
   return (
     <header
@@ -239,12 +241,13 @@ export default function Navbar() {
                 </motion.span>
               </a>
             </li>
+            {/* Features */}
             <li className="bg-transparent hover:bg-transparent">
               {/* Dropdown menu */}
               <div
                 className="relative"
-                onMouseEnter={() => setOpen(true)}
-                onMouseLeave={() => setOpen(false)}
+                onMouseEnter={() => setFeatureOpen(true)}
+                onMouseLeave={() => setFeatureOpen(false)}
               >
                 <motion.div
                   className="flex items-center gap-1 cursor-pointer font-medium
@@ -257,10 +260,10 @@ export default function Navbar() {
                   whileHover={{ y: -6, color: "#ffffff" }}
                   transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 >
-                  <span>Products</span>
+                  <span>Features</span>
 
                   <motion.span
-                    animate={{ rotate: open ? 180 : 0 }}
+                    animate={{ rotate: featureOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                     className="flex items-center"
                   >
@@ -270,7 +273,7 @@ export default function Navbar() {
 
                 {/* Dropdown */}
                 <AnimatePresence>
-                  {open && (
+                  {featureOpen && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -418,6 +421,112 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
             </li>
+            {/* Products */}
+            <li className="bg-transparent hover:bg-transparent">
+              {/* Dropdown menu */}
+              <div
+                className="relative"
+                onMouseEnter={() => setProductOpen(true)}
+                onMouseLeave={() => setProductOpen(false)}
+              >
+                <motion.div
+                  className="flex items-center gap-1 cursor-pointer font-medium
+             text-[#ffffffe1]
+             bg-transparent
+             hover:bg-transparent
+             active:bg-transparent
+             focus:bg-transparent
+             outline-none"
+                  whileHover={{ y: -6, color: "#ffffff" }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                >
+                  <span>Products</span>
+
+                  <motion.span
+                    animate={{ rotate: productOpen ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex items-center"
+                  >
+                    <FiChevronDown size={20} />
+                  </motion.span>
+                </motion.div>
+
+                {/* Dropdown */}
+                <AnimatePresence>
+                  {productOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-3 w-[456px] rounded-xl bg-white shadow-lg p-2"
+                    >
+                      <Link href="#" className="block px-1 py-1 text-sm">
+                        <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                          <Image
+                            src="/icons/store-icon.png"
+                            alt="Store Image"
+                            width={40}
+                            height={40}
+                            className="dropdown-items-icon p-2 rounded-lg"
+                          />
+                          <div className="">
+                            <h3 className="text-[16px] font-medium">
+                              Easy Store Setup
+                            </h3>
+                            <p className="text-gray-500 text-[14px] mt-1">
+                              Launch your store quickly...
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      <Link href="#" className="block px-1 py-1 text-sm">
+                        <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                          <Image
+                            src="/icons/paperclip-icon.png"
+                            alt="Store Image"
+                            width={40}
+                            height={40}
+                            className="dropdown-items-icon p-2 rounded-lg"
+                          />
+                          <div className="">
+                            <h3 className="text-[16px] font-medium">
+                              Inventory & Order Management
+                            </h3>
+                            <p className="text-gray-500 text-[14px] mt-1">
+                              Manage products, orders, and customers...
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      <Link href="#" className="block px-1 py-1 text-sm">
+                        <div className="dropdown-item flex items-center gap-3 w-full h-full hover:bg-gray-100 rounded-xl transition-colors duration-200 p-2">
+                          <Image
+                            src="/icons/doller-icon.png"
+                            alt="Store Image"
+                            width={40}
+                            height={40}
+                            className="dropdown-items-icon p-2 rounded-lg"
+                          />
+                          <div className="">
+                            <h3 className="text-[16px] font-medium">
+                              Payments & Shipping
+                            </h3>
+                            <p className="text-gray-500 text-[14px] mt-1">
+                              Accept payments and deliver orders easily...
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </li>
             <li>
               <a className="hover:bg-transparent hover:text-white hover:font-medium">
                 <motion.span
@@ -455,7 +564,22 @@ export default function Navbar() {
         </div>
         <div className="navbar-end">
           <button className="btn bg-transparent border-none shadow-none hover:bg-transparent primary-text text-[14px] font-normal">
-            Log in
+            <Link
+                href="/about-us"
+                className="hover:bg-transparent hover:text-white hover:font-medium"
+              >
+                <motion.span
+                  className="inline-block text-[#ffffffe1] font-medium cursor-pointer"
+                  whileHover={{ y: -6, color: "#ffffff" }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 15,
+                  }}
+                >
+                  Log in
+                </motion.span>
+              </Link>
           </button>
           <div className="hidden md:inline-block">
             <Button value={"Start for Free"} />

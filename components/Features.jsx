@@ -29,38 +29,38 @@ export default function Features() {
             <h3 className="text-[#191715] text-[22px] text-left leading-[120%] font-normal">
               Easy Inventory & Order Management
             </h3>
-            <p className="text-[#373A46] text-[12px] md:text-[16px] text-left font-light mt-4 mb-10 opacity-[0.8] leading-[140%]">
+            <p className="text-[#373A46] text-[12px] md:text-[16px] text-left font-light mt-4 mb-10 opacity-[0.8] leading-[140%] lg:w-10/12 ">
               Add products, manage variants, set pricing, and organize
               categories through a clean, intuitive interface.
             </p>
           </div>
-          <div>
+          <div className="overflow-hidden">
             <Image
               src="/images/feature-1.png"
               alt="feature image 1"
               width={500}
               height={300}
-              className="mt-8 rounded-lg object-contain w-[500px] h-auto"
+              className="mt-8 rounded-lg object-contain w-[500px] h-auto relative lg:top-2 mx-auto"
             />
           </div>
         </div>
+        
         <div className="bg-[#F7F9FB] border border-[#DADDE4] rounded-2xl px-6 pt-8">
           <div>
             <h3 className="text-[#191715] text-[22px] text-left leading-[120%] font-normal">
               Analytics & Insights Manage
             </h3>
-            <p className="text-[#373A46] text-[12px] md:text-[16px] text-left font-light mt-4 mb-10 opacity-[0.8] leading-[140%]">
-              Track sales, customer behavior, traffic sources, and performance
-              insights to make smarter business decisions.
+            <p className="text-[#373A46] text-[12px] md:text-[16px] text-left font-light mt-4 mb-10 opacity-[0.8] leading-[140%] lg:w-10/12 ">
+              Track sales, customer behavior, traffic sources, and performance insights to make smarter business decisions.
             </p>
           </div>
           <div>
             <Image
               src="/images/feature-2.png"
-              alt="feature image 1"
+              alt="feature image 2"
               width={500}
               height={300}
-              className="mt-8 rounded-lg object-contain w-[500px] h-auto"
+              className="mt-8 rounded-lg object-contain w-[500px] h-auto relative lg:top-10 mx-auto" 
             />
           </div>
         </div>
@@ -80,7 +80,8 @@ export default function Features() {
               drag-and-drop editor no coding needed.
             </p>
           </div>
-          <div className="w-[280px] h-[130px] md:w-[300px] md:h-[200px] lg:w-[325px] lg:h-[285px] lg:-mb-[23px]">
+          <div className="flex justify-center">
+            <div className="w-[280px] h-[130px] md:w-[300px] md:h-[200px] lg:w-[325px] lg:h-[285px] lg:-mb-[23px]">
             <Image
               src="/images/feature-3.png"
               alt="feature image 1"
@@ -88,6 +89,7 @@ export default function Features() {
               height={308}
               className="w-full h-full object-contain lg:p-5"
             />
+          </div>
           </div>
         </div>
         <div
@@ -103,7 +105,8 @@ export default function Features() {
               international gateways with bank-level security.
             </p>
           </div>
-          <div className="w-[280px] h-[130px] md:w-[300px] md:h-[200px] lg:w-[325px] lg:h-[285px] lg:-mb-[23px]">
+          <div className="flex justify-center">
+            <div className="w-[280px] h-[130px] md:w-[300px] md:h-[200px] lg:w-[325px] lg:h-[285px] lg:-mb-[23px]">
             <Image
               src="/images/feature-4.png"
               alt="feature image 1"
@@ -111,6 +114,7 @@ export default function Features() {
               height={308}
               className="w-full h-full object-contain"
             />
+          </div>
           </div>
         </div>
         <div
@@ -126,7 +130,8 @@ export default function Features() {
               categories through a clean, intuitive interface.
             </p>
           </div>
-          <div className="w-[280px] h-[130px] md:w-[300px] md:h-[200px] lg:w-[325px] lg:h-[285px] lg:-mb-[16px]">
+          <div className="flex justify-center">
+              <div className="w-[280px] h-[130px] md:w-[300px] md:h-[200px] lg:w-[325px] lg:h-[285px] lg:-mb-[16px]">
             <Image
               src="/images/feature-5.png"
               alt="feature image 1"
@@ -134,6 +139,7 @@ export default function Features() {
               height={308}
               className="w-full h-full object-contain"
             />
+          </div>
           </div>
         </div>
       </div>

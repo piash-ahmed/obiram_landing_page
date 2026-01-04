@@ -81,9 +81,9 @@ export default function PricingSection() {
             <p className="text-[12px] lg:text-[14px] text-[#373A46]">Pricing</p>
           </div>
           <div>
-            <h3 className="text-[#191715] text-[28px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] leading-[120%]">
+            <h1 className="text-[#191715] text-[28px] md:text-[40px] lg:text-[48px] tracking-[-0.96px] leading-[120%] w-10/12">
               Simple, Transparent Pricing for Every Business
-            </h3>
+            </h1>
           </div>
         </div>
 
