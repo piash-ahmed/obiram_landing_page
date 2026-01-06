@@ -9,7 +9,7 @@ export default function TermsOfServicePage() {
   return (
     <>
     <Navbar/>
-      <section className="bg-gray-50">
+      <section className="py-16 h-full mb-96">
         <div className="max-w-4xl mx-auto px-6 py-16">
           {/* Page Title */}
           <h1 className="text-4xl font-bold text-gray-900 mb-10 text-center">

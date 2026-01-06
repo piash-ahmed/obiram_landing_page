@@ -7,7 +7,10 @@ export default function Footer() {
       className="text-white bg-cover bg-top bg-no-repeat pt-6 md:pt-10 relative -mt-16 md:-mt-32 lg:-mt-72"
       style={{ backgroundImage: "url('/images/footer-bg.png')" }}
     >
-      <section className="flex flex-col lg:flex-row justify-center gap-2 py-10 px-6 md:px-0 lg:py-10 font-light w-11/12 mx-auto">
+      <section className="w-10/12 mx-auto">
+
+      
+      <div className="flex flex-col lg:flex-row justify-center gap-2 py-10 px-6 md:px-0 lg:py-10 font-light ">
         <aside className="lg:w-[40%]">
           <div className="flex">
             <a className="btn bg-transparent shadow-none border-0 hover:bg-transparent mb-3 p-0">
@@ -144,7 +147,7 @@ export default function Footer() {
             </a>
           </nav>
         </div>
-      </section>
+      </div>
 
       <div className="flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto pb-8">
         <div className="  flex flex-col lg:flex-row items-center justify-between gap-4 p-6">
@@ -163,6 +166,7 @@ export default function Footer() {
           />
         </div>
       </div>
+      </section>
     </footer>
   );
 }

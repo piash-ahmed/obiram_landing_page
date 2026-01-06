@@ -1,4 +1,5 @@
 import Image from "next/image";
+import RippleButton from "./RippleButton";
 
 export default function FAQ() {
   return (
@@ -31,16 +32,9 @@ export default function FAQ() {
             We’re here to assist with anything unique to your business. Tell us
             what you need, and our team will guide you step-by-step.
           </p>
-          <button className="button-orange py-[10px] px-8 text-white rounded-lg text-[12px] font-semibold flex items-center">
-            Send a Massage
-            <Image
-              src="/icons/arrow-right-white.png"
-              alt="right arrow"
-              width={16}
-              height={9}
-              className="inline-block ml-2"
-            />
-          </button>
+          <RippleButton className="button button-orange text-white py-[9px] px-5 flex items-center gap-2 text-[12px] font-semibold">
+            Send a Message
+          </RippleButton>
         </div>
       </div>
 

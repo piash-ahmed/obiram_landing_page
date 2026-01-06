@@ -7,6 +7,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
+import RippleButton from "./RippleButton";
 
 
 export default function Navbar() {
@@ -684,7 +685,10 @@ const [featureOpen, setFeatureOpen] = useState(false);
               </Link>
           </button>
           <div className="hidden md:inline-block">
-            <Button value={"Start for Free"} />
+            
+             <RippleButton className="button py-[9px] px-5 text-black flex items-center gap-2 text-[12px] font-semibold">
+              Start for Free
+            </RippleButton>
           </div>
         </div>
       </nav>
