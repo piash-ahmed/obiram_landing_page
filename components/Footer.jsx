@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer
-      className="text-white bg-cover bg-top bg-no-repeat pt-6 md:pt-10 relative -mt-16 md:-mt-32 lg:-mt-72"
+      className="text-white bg-cover bg-top bg-no-repeat pt-6 md:pt-10 relative -mt-16 md:-mt-32 lg:-mt-72 pb-8"
       style={{ backgroundImage: "url('/images/footer-bg.png')" }}
     >
       <section className="w-10/12 mx-auto">
@@ -30,7 +30,7 @@ export default function Footer() {
               />
             </a>
           </div>
-          <p className="text-sm lg:text-base text-white leading-[140%] mt-3">
+          <p className="text-sm lg:text-base text-white leading-[140%] mt-3 w-10/12">
             Build, Run & Grow Your Online Store, The All-in-One Commerce
             Platform.
           </p>
@@ -73,7 +73,7 @@ export default function Footer() {
             </a>
           </div>
         </aside>
-        <div className="lg:w-[60%] flex flex-col lg:flex-row gap-6">
+        <aside className="lg:w-[60%] flex flex-col justify-center lg:flex-row gap-6">
           <nav className="space-y-1.5 flex flex-col">
             <h6 className="text-[#ffffffb3] text-base md:text-lg uppercase font-normal mb-1 md:mb-4">
               Obiram
@@ -146,11 +146,11 @@ export default function Footer() {
               40 Penarth Road, Cardiff, Wales, <br /> CF10 5GP, United Kingdom
             </a>
           </nav>
-        </div>
+        </aside>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto pb-8">
-        <div className="  flex flex-col lg:flex-row items-center justify-between gap-4 p-6">
+      <div className="footer-bottom flex flex-col md:flex-row items-center justify-between gap-3 py-[10px] px-3 mt-6 md:mt-8 lg:mt-12">
+        <div className="  flex flex-col lg:flex-row items-center justify-between gap-4">
           <p className="text-xs text-center md:text-sm  font-light">
             2025 Obiram © All rights reserved | Powered By Nextup Global Ltd
           </p>

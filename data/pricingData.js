@@ -21,6 +21,7 @@ export const pricingData = {
         "Custom Domain",
         "Analytics & Reporting",
         "Community Support & Resources",
+        
       ],
     },
     {

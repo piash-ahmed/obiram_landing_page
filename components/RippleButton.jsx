@@ -58,7 +58,7 @@ export default function RippleButton({ children, className = "", onClick }) {
               width: r.size,
               height: r.size,
               borderRadius: "50%",
-              backgroundColor: "rgba(255,71,18,0.6)",
+              backgroundColor: "rgba(255,71,18,1)",
               pointerEvents: "none",
             }}
           />
